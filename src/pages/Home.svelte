@@ -1,12 +1,15 @@
 <script>
   import { onMount } from 'svelte';
   import {template_iframe} from '../base/dataconfig.js'
-  
+    import Swal from 'sweetalert2';
+  let showAlert = true;
+
 
   let selectedTemplate = null;
 
   function handleRadioChange(event) {
     selectedTemplate = event.target.value;
+     showAlert = true;
   }
 
   let modalopen = false;
@@ -17,7 +20,9 @@
   
   onMount(selectRandomTemplate);
 
- 
+function iframeload(){
+  showAlert = false;
+}
 </script>
 
 
@@ -47,6 +52,8 @@
     overflow-x: hidden; /* Mencegah scroll horizontal */
   }
 </style>
+
+
 
 <div class="btnfloat">
   <button
@@ -90,8 +97,30 @@
     <iframe src="https://bobwatcherx.github.io/chatbokep" style="width: 100%; height: 500px;" frameborder="0"></iframe>
   </div>
 {:else}
-  {#if selectedTemplate}
+
+{#if showAlert}
+<div class="card  waves waves-effect  pink darken-2 z-depth-5" style="padding: 5px;">
+  <div style="display: flex;justify-content: center">
+     <div class="preloader-wrapper big active">
+    <div class="spinner-layer spinner-white-only" >
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div><div class="gap-patch">
+        <div class="circle"></div>
+      </div><div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <h5 style="color: white;font-weight: bold">Sedang mengganti Genre Bokep...</h5>
+</div>
+{/if}
+
+
+  {#if selectedTemplate }
   <iframe src={selectedTemplate}
+  on:load={iframeload}
      style="width: 100vw; height: 100vh; overflow-x: hidden;" frameborder="0"></iframe>
   {/if}
 {/if}
