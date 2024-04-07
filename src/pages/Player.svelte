@@ -4,10 +4,10 @@
   
   export let id
   let selectedTemplate = null;
-
   function handleRadioChange(event) {
     selectedTemplate = event.target.value;
   }
+
 
   let modalopen = false;
   function selectRandomTemplate() {
@@ -76,6 +76,10 @@
     </div>
   </div>
   </div>
+
+
+
+
 {#if modalopen}
   <div class="card z-depth-5" style="margin:10px;z-index: 10">
     <div class="container">
@@ -86,7 +90,8 @@
           class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">close</i></button>
       </div>
     </div>
-    <iframe src="https://bobwatcherx.github.io/chatbokep" style="width: 100%; height: 500px;" frameborder="0"></iframe>
+    <iframe 
+    src="https://bobwatcherx.github.io/chatbokep" style="width: 100%; height: 500px;" frameborder="0"></iframe>
   </div>
 {:else}
   {#if selectedTemplate}

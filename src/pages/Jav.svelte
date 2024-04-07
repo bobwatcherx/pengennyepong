@@ -47,7 +47,7 @@
     position: fixed;
     bottom: 30px;
     right: 10px;
-    overflow-x: hidden; /* Mencegah scroll horizontal */
+    overflow-x: hidden; 
   }
 </style>
 
