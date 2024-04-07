@@ -99,7 +99,7 @@ function iframeload(){
 {:else}
 
 {#if showAlert}
-<div class="card  waves waves-effect  pink darken-2 z-depth-5" style="padding: 5px;">
+<div class="card  waves waves-effect  pink darken-2 z-depth-5" style="padding: 5px;width: 100%">
   <div style="display: flex;justify-content: center">
      <div class="preloader-wrapper big active">
     <div class="spinner-layer spinner-white-only" >

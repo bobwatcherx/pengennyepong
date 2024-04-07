@@ -13,8 +13,8 @@
     <Route path="player/:id" let:params>
       <Player id={params.id} />
     </Route>
-    <Route path="jav/:id" let:params>
-      <Jav javid={params.id} />
+    <Route path="jav/:id/:title" let:params>
+      <Jav javid={params.id} javtitle={params.title}/>
     </Route>
   </div>
 </Router>
