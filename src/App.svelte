@@ -3,10 +3,14 @@
   import Home from "./pages/Home.svelte";
   import Player from "./pages/Player.svelte";
   import Jav from "./pages/Jav.svelte";
+    import Navbarmenu from './lib/Navbarmenu.svelte'
+
+
 </script>
 
 <Router>
   <div>
+    <Navbarmenu/>
     <Route path="/">
       <Home />
     </Route>

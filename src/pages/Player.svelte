@@ -56,13 +56,6 @@
   >Chat Admin</button>
 </div>
 
-<div class="card" style="padding: 1px;margin-top: 0px;">
-  <div style="background-color: black;padding: 2px">
-    <h6 style="color: white;
-  text-align: center;
-  font-weight: bold">PENGEN NGENTOT</h6>
-  </div>
-</div>
   <div class="card">
     <div class="container">
     <h6 style="font-weight: bold">Pilih genre Bokep</h6>
